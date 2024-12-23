@@ -1,0 +1,64 @@
+<DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Template</title>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.min.js"></script>
+
+   </head>
+   <body>
+		<div class="menu-wrap">
+			<nav class="menu">
+				<img id="logo" src="img/logo.png" alt="logo" />
+				<hr>
+				<div class="links">
+					<a href="index.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="portfolio.html">Portfolio</a>
+					<div class="submenu">
+						<a href="branding.html">Branding Designs</a>
+						<a href="illustrations.html">Illustration Designs</a>
+						<a href="webdesign.html">Web Designs</a>
+						<a href="presentations.html">Presentation Designs</a>
+						<a href="everythingelse.html">The Rest</a>
+					</div>
+					<a href="services.html">Services</a>
+					<a href="letsconnect.html">Let's Connect</a>
+					<hr>
+					<a href="https://www.facebook.com/profile.php?id=61556552060281">Facebook</a>
+					<a href="https://www.instagram.com/chromaticpixiedesigns">Instagram</a>
+					<a href="https://www.linkedin.com/in/kristaleehewco/">Linkedin</a>
+					<a href="mailto:chromaticpixiedesigns@gmail.com">Email</a>
+					<hr>
+					<div id="copyright"> &copy; 2024 Chromatic Pixie Designs. <br> All rights reserved. </div>
+				</div>
+			</nav>
+		</div>
+		<button class="menu-toggle">
+			<img src="img/pixie.webp" alt="Toggle Menu" id="menu-icon">
+		</button>
+
+
+<script>
+
+			(function($) {
+				"use strict";
+				const menu = $(".menu-wrap");
+				const toggleButton = $(".menu-toggle");
+				toggleButton.on("click", function() {
+					menu.toggleClass("active");
+				});
+				$(document).on("click", function(e) {
+					const target = $(e.target);
+					if (!target.closest(".menu-wrap, .menu-toggle").length) {
+						menu.removeClass("active");
+					}
+				});
+			})(jQuery);
+		</script>
+      </body>
+      </html>

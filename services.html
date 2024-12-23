@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Template</title>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="menu-wrap">
+			<nav class="menu">
+				<img id="logo" src="img/logo.png" alt="logo" />
+				<hr>
+				<div class="links">
+					<a href="index.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="portfolio.html">Portfolio</a>
+					<div class="submenu">
+						<a href="branding.html">Branding Designs</a>
+						<a href="illustrations.html">Illustration Designs</a>
+						<a href="webdesign.html">Web Designs</a>
+						<a href="presentations.html">Presentation Designs</a>
+						<a href="everythingelse.html">The Rest</a>
+					</div>
+					<a href="services.html">Services</a>
+					<a href="letsconnect.html">Let's Connect</a>
+					<hr>
+					<a href="https://www.facebook.com/profile.php?id=61556552060281">Facebook</a>
+					<a href="https://www.instagram.com/chromaticpixiedesigns">Instagram</a>
+					<a href="https://www.linkedin.com/in/kristaleehewco/">Linkedin</a>
+					<a href="mailto:chromaticpixiedesigns@gmail.com">Email</a>
+					<hr>
+					<div id="copyright"> &copy; 2024 Chromatic Pixie Designs. <br> All rights reserved. </div>
+				</div>
+			</nav>
+		</div>
+		<button class="menu-toggle">
+			<img src="img/pixie.webp" alt="Toggle Menu" id="menu-icon">
+		</button>
+
+
+    <div class=services>
+        <div class="services-title">
+            <img src="img/services.webp" alt="pixie's delightful services"></div>
+        <section class="services-content">
+            <div class="flip-card">
+                <div class="flip-card-effect">
+                    <div class="flip-card-front">
+                        <img src="img/branding.webp" alt="branding icon">
+                    </div>
+                    <div class="flip-card-back">
+                        <h2> Wanna see my <br> branding designs? </h2>
+                        <br>
+                        <br>
+                        <button class="click-here-button">
+                            <a href="branding.html">Click Here </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-effect">
+                    <div class="flip-card-front">
+                        <img src="img/illustration.webp" alt="illustrations icon">
+                    </div>
+                    <div class="flip-card-back">
+                        <h2> Wanna see my <br> illustration designs? </h2>
+                        <br>
+                        <br>
+                        <button class="click-here-button">
+                            <a href="illustrations.html">Click Here </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="services-center">
+                <h2>Custom Logo Design & Branding Packages</h2>
+                <p>We specialize in logos, social media assets and full brand makeovers. Our designs ensure your identity stands out and connects to your targetted audience.</p>
+                <h2>Illustrations & Graphics:</h2>
+                <p>From custom illustrations (sketch and drawing projects) to digital art (posters, photo edits, etc.) we create visuals that bring your ideas to life. </p>
+                <h2>Website Design:</h2>
+                <p>Your website is your brand’s online home, and we make it magical. With visually stunning, user-friendly designs, we create sites that are sure to leave a lasting impression. If you want a perfect example of our web design abilties just
+                    take a look around our website! </p>
+                <h2>Presentation Designs</h2>
+                <p>We design business cards, magazines, product labels, and slide decks that will captivate your intended audience.</p>
+                <br>
+                <br>
+                <p>*Hover over any of the four images of pixel working to flip them over and reveal links to portfolio pages that correspond to the content of the front image*</p>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-effect">
+                    <div class="flip-card-front" id="bottom">
+                        <img src="img/webdesign.webp" alt="web designs icon">
+                    </div>
+                    <div class="flip-card-back">
+                        <h2> Wanna see my <br> web designs? </h2>
+                        <br>
+                        <br>
+                        <button class="click-here-button">
+                            <a href="webdesigns.html">Click Here </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-effect">
+                    <div class="flip-card-front" id="bottom">
+                        <img src="img/presentation.webp" alt="presentations icon">
+                    </div>
+                    <div class="flip-card-back">
+                        <h2> Wanna see my <br> presentation designs? </h2>
+                        <br>
+                        <br>
+                        <button class="click-here-button">
+                            <a href="presentations.html">Click Here </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+ 
+		<script>
+			(function($) {
+				"use strict";
+				const menu = $(".menu-wrap");
+				const toggleButton = $(".menu-toggle");
+				toggleButton.on("click", function() {
+					menu.toggleClass("active");
+				});
+				$(document).on("click", function(e) {
+					const target = $(e.target);
+					if (!target.closest(".menu-wrap, .menu-toggle").length) {
+						menu.removeClass("active");
+					}
+				});
+			})(jQuery);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Template</title>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="menu-wrap">
+			<nav class="menu">
+				<img id="logo" src="img/logo.png" alt="logo" />
+				<hr>
+				<div class="links">
+					<a href="index.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="portfolio.html">Portfolio</a>
+					<div class="submenu">
+						<a href="branding.html">Branding Designs</a>
+						<a href="illustrations.html">Illustration Designs</a>
+						<a href="webdesign.html">Web Designs</a>
+						<a href="presentations.html">Presentation Designs</a>
+						<a href="everythingelse.html">The Rest</a>
+					</div>
+					<a href="services.html">Services</a>
+					<a href="letsconnect.html">Let's Connect</a>
+					<hr>
+					<a href="https://www.facebook.com/profile.php?id=61556552060281">Facebook</a>
+					<a href="https://www.instagram.com/chromaticpixiedesigns">Instagram</a>
+					<a href="https://www.linkedin.com/in/kristaleehewco/">Linkedin</a>
+					<a href="mailto:chromaticpixiedesigns@gmail.com">Email</a>
+					<hr>
+					<div id="copyright"> &copy; 2024 Chromatic Pixie Designs. <br> All rights reserved. </div>
+				</div>
+			</nav>
+		</div>
+		<button class="menu-toggle">
+			<img src="img/pixie.webp" alt="Toggle Menu" id="menu-icon">
+		</button>
+
+
+
+            <div class="aboutkrissy"><br> Here, you’ll find a collection of designs I’ve created over the past two years—a journey that’s been nothing short of incredible. While two years might not seem like a long time, it’s been transformative for me. I started with no experience, inspired by someone who believed in me before I even believed in myself. Sadly, they passed away a few years ago, but their encouragement still drives me. It pushes me to make each day better than the last, and I like to think that wherever they are now, they’re proud of how far I’ve come. <br>
+        <br> I remember my first months at VCAD, sitting in awe as my peers presented their projects. Their work was so impressive that I struggled to feel like I belonged. My own projects felt so far behind in comparison that I was embarrassed to present them in class. But with hard work and a genuine passion for learning, I slowly started to grow. <br>
+        <br> Now, I’m excited to share my work. I actively seek feedback from my professors and peers, embracing constructive criticism as my greatest ally. I’ve come to value hearing what needs improvement even more than praise because every suggestion helps me grow, both as an artist and as a person. <br>
+        <br> Looking back, I’m amazed at how much progress I’ve made in such a short time. My journey has been one of resilience, growth, and discovery, and I hope it inspires you to see what’s possible when you believe in yourself and never stop improving. </p></div>
+            <br>
+            
+
+
+		<script>
+			(function($) {
+				"use strict";
+				const menu = $(".menu-wrap");
+				const toggleButton = $(".menu-toggle");
+				toggleButton.on("click", function() {
+					menu.toggleClass("active");
+				});
+				$(document).on("click", function(e) {
+					const target = $(e.target);
+					if (!target.closest(".menu-wrap, .menu-toggle").length) {
+						menu.removeClass("active");
+					}
+				});
+			})(jQuery);
+		</script>
+	</body>
+</html>
