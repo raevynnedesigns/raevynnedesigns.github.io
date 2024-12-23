@@ -1,0 +1,137 @@
+# raevynnedesigns.github.io
+ my portfolio website
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Template</title>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+	<body>
+		<div class="menu-wrap">
+			<nav class="menu">
+				<img id="logo" src="img/logo.png" alt="logo" />
+				<hr>
+				<div class="links">
+					<a href="index.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="portfolio.html">Portfolio</a>
+					<div class="submenu">
+						<a href="branding.html">Branding Designs</a>
+						<a href="illustrations.html">Illustration Designs</a>
+						<a href="webdesign.html">Web Designs</a>
+						<a href="presentations.html">Presentation Designs</a>
+						<a href="everythingelse.html">The Rest</a>
+					</div>
+					<a href="services.html">Services</a>
+					<a href="letsconnect.html">Let's Connect</a>
+					<hr>
+					<a href="https://www.facebook.com/profile.php?id=61556552060281">Facebook</a>
+					<a href="https://www.instagram.com/chromaticpixiedesigns">Instagram</a>
+					<a href="https://www.linkedin.com/in/kristaleehewco/">Linkedin</a>
+					<a href="mailto:chromaticpixiedesigns@gmail.com">Email</a>
+					<hr>
+					<div id="copyright"> &copy; 2024 Chromatic Pixie Designs. <br> All rights reserved. </div>
+				</div>
+			</nav>
+		</div>
+		<button class="menu-toggle">
+			<img src="img/pixie.webp" alt="Toggle Menu" id="menu-icon">
+		</button>
+
+
+      <div class="main-content">
+        <div class="portrait">
+        <img id="portrait" src="img/me.webp" alt="me">
+      </div>
+      <div class="intro-text">
+        <p>
+        </p><h1> Welcome to Chromatic Pixie Designs!</h1>
+
+        <h2> For Sean: 
+          <br>1. I included a pull out side menu
+<br>2. Masonry plugin on my home page
+<br>3. Click here button on portfolio pagesis animated
+<br>4. Glow on link hover in side menu</h2>
+<br>
+<br>For starters, my name is Krissy, and that’s Pixel over there, struggling to open the menu. I offered my help, but as usual, she believes she can do anything she sets her mind to, no matter how big or small. Speaking of doing anything you set your mind to, over the past two years, I’ve transformed from a beginner into a passionate designer, driven by the encouragement of someone special who believed in me. My journey at VCAD has been filled with growth, resilience, and a dedication to improvement. I’m excited to share my work and hope it inspires others to embrace their own creative journey!
+<br>
+<br>
+If you want to learn more about me (or Pixel), check out the “About Us” link by clicking on Pixel to help her open the menu and reveal the website navigation! Have fun exploring our magical domain!
+      </div>
+    </div>
+
+<div class="featured"><h1>Featured Designs</h1>
+
+*hint* click the image to learn more about the project
+<br>
+<br>
+</div>
+
+<div class="masonry">
+  <div class="masonry-item"><img src="img/pd1.jpg" alt="magazine"></div>
+  <div class="masonry-item"><img src="img/fairyedit.jpg" alt="fairy"></div>
+  <div class="masonry-item"><img src="img/1731138957797-241bcfe8-a186-4b53-bef4-50e27c01390e_1.jpg" alt="skull"></div>
+  <div class="masonry-item"><img src="img/p!nk1.jpg" alt=""></div>
+  <div class="masonry-item"><img src="img/digitalpixielogo.jpg" alt="Image 2"></div>
+  <div class="masonry-item"><img src="img/doverebrand.jpg" alt="Image 3"></div>
+  <div class="masonry-item"><img src="img/fangel.jpg" alt="Image 1"></div>
+  <div class="masonry-item"><img src="img/Jelly.jpeg" alt="Image 2"></div>
+  <div class="masonry-item"><img src="img/oolong1.jpg" alt="Image 3"></div>
+  <div class="masonry-item"><img src="img/oolong21.jpg" alt="Image 1"></div>
+  <div class="masonry-item"><img src="img/soullink.jpg" alt="Image 2"></div>
+    <div class="masonry-item"><img src="img/instinct9 copy.jpg" alt="Image 1"></div>
+  <div class="masonry-item"><img src="img/photoshopanimation.gif" alt="Image 3"></div>
+  <div class="masonry-item"><img src="img/vehiclewrap.jpg" alt="Image 1"></div>
+  <div class="masonry-item"><img src="img/bloodhound.gif" alt="Image 2"></div>
+  <div class="masonry-item"><img src="img/bluerockies.jpg" alt="Image 3"></div>
+
+  <div class="masonry-item"><img src="img/onwednesday.gif" alt="Image 2"></div>
+</div>
+
+
+		<script>
+$(document).ready(function() {
+  $(".links a").hover(function() {
+    $(this).css("text-shadow", "0 0 10px #ff6f91, 0 0 20px #ff6f91, 0 0 30px #ff6f91");
+  }, function() {
+    $(this).css("text-shadow", "none");
+  });
+});
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const masonryGrid = document.querySelector('.masonry');
+
+    if (typeof Masonry !== 'undefined') {
+      new Masonry(masonryGrid, {
+        itemSelector: '.masonry-item',
+        columnWidth: '.masonry-item',
+        percentPosition: true,
+        gutter: 10,
+      });
+    } else {
+      console.error('Masonry is not defined. Ensure the Masonry script is loaded.');
+    }
+  });
+
+			(function($) {
+				"use strict";
+				const menu = $(".menu-wrap");
+				const toggleButton = $(".menu-toggle");
+				toggleButton.on("click", function() {
+					menu.toggleClass("active");
+				});
+				$(document).on("click", function(e) {
+					const target = $(e.target);
+					if (!target.closest(".menu-wrap, .menu-toggle").length) {
+						menu.removeClass("active");
+					}
+				});
+			})(jQuery);
+		</script>
+	</body>
+</html>
